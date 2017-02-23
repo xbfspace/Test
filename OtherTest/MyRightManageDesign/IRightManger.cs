@@ -25,6 +25,8 @@ namespace Arch.Data.Test.OtherTest.MyRightManageDesign
         /// <returns></returns>
         IEnumerable<Right> QueryRightByBusinessModule(int businessModuleId,GrantSubjectType subjectType,int subjectId,GrantType grantType);
 
+        //Right GetDenyRight(GrantSubjectType subjectType,int subjectId,int businessModule,int rightId);
+        //Right GetAllowRight(GrantSubjectType subjectType, int subjectId, int businessModule, int rightId);
         #endregion
     }
 }

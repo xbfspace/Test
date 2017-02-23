@@ -16,5 +16,7 @@ namespace Arch.Data.Test.OtherTest.MyRightManageDesign.RightManagers.Model
         public string Desc { get; set; }
         //所属业务模块
         public BusinessModuleTemplate BusinessModuleTemplate { get; set; }
+        //权限优先级别
+        public RightPriority Priority { get; set; }
     }
 }

@@ -14,7 +14,8 @@ create table right(
 	code int,--权限编码
 	name nvarchar(200) ,--权限名称
 	desc nvarchar(200) ,--权限描述
-	businessModuleTpl int --所属业务模块定义id
+	businessModuleTpl int, --所属业务模块定义id
+	priority int --权限优先级
 )
 go
 --业务模块实例表

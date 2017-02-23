@@ -55,6 +55,7 @@
     <Compile Include="OtherTest\MyRightManageDesign\RightManagers\Model\GrantSubjectType.cs" />
     <Compile Include="OtherTest\MyRightManageDesign\RightManagers\Model\Right.cs" />
     <Compile Include="OtherTest\MyRightManageDesign\RightManagers\Model\GrantType.cs" />
+    <Compile Include="OtherTest\MyRightManageDesign\RightManagers\Model\RightPriority.cs" />
     <Compile Include="OtherTest\MyRightManageDesign\Test\UserRights\UserRightTest.cs" />
     <Compile Include="OtherTest\RightManager.cs" />
     <Compile Include="OtherTest\RightManagerInvoker.cs" />
