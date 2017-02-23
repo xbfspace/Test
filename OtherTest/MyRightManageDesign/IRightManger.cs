@@ -10,8 +10,8 @@ namespace Arch.Data.Test.OtherTest.MyRightManageDesign
     public interface IRightManger
     {
         #region grant
-        bool GrantRightToRole(Right right,Role role,GrantType grantType);
-        bool GrantRightToUser(Right right,User user,GrantType grantType);
+        bool GrantRightToRole(BusinessModuleInstance businessModule, Right right, Role role);
+        bool GrantRightToRole(BusinessModuleInstance businessModule, Right right, User user);
         #endregion
 
 

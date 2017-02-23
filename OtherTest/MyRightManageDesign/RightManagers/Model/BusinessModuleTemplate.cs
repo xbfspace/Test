@@ -5,8 +5,8 @@ using System.Text;
 
 namespace Arch.Data.Test.OtherTest.MyRightManageDesign.RightManagers.Model
 {
-    //业务模块
-    public class BusinessModule
+    //业务模块模板
+    public class BusinessModuleTemplate
     {
         //标识
         public long ID { get; set; }

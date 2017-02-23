@@ -5,16 +5,16 @@ using System.Text;
 
 namespace Arch.Data.Test.OtherTest.MyRightManageDesign.RightManagers.Model
 {
-    public class Right
+    //业务模块实例
+    public class BusinessModuleInstance
     {
+        //标识
         public long ID { get; set; }
-        //权限编码
-        public int Code { get; set; }
-        //权限名称
+        //业务模块编码 如：Portal$AddressBook
+        public string Code { get; set; }
+        //业务模块名称  如： 门户>>通讯录权限
         public string Name { get; set; }
-        //权限描述
+        //业务模块描述
         public string Desc { get; set; }
-        //所属业务模块
-        public BusinessModuleTemplate BusinessModuleTemplate { get; set; }
     }
 }

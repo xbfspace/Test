@@ -10,45 +10,45 @@ namespace Arch.Data.Test.OtherTest.MyRightManageDesign
     public class RightManager : IRightManger
     {
         #region grant
-        public virtual bool GrantRightToRole(Right right, Role role,GrantType grantType)
+        public virtual bool GrantRightToRole(BusinessModuleInstance businessModule, Right right, Role role)
         {
             var sql = @"declare @rightAssignId int 
-                        select @rightAssignId = id from right_assign where businessModule = {0} and right={1} and subject ={2} and subjectType={3})
+                        select @rightAssignId = id from right_assign where businessModuleInstance = {0} and right={1} and subject ={2} and subjectType={3})
                         if @rightAssignId is not null
                            begin 
                               update right_assign
-                              set businessModule={0} , right={1}, subject={2} ,subjectType={3},grantType={4}
+                              set businessModuleInstance={0} , right={1}, subject={2} ,subjectType={3},grantType={4}
                            end
                         else
                            begin
-                              insert into right_assign(businessModuleId,right,subject,subjectType,grantType)
+                              insert into right_assign(businessModuleInstance,right,subject,subjectType,grantType)
                               values ({0},{1},{2},{3},{4})
                            end
                       
                         ";
-            sql = string.Format(sql, right.BusinessModule.Code, right.Code, role.ID, GrantSubjectType.Role);
+            sql = string.Format(sql, businessModule.ID, right.ID, role.ID, GrantSubjectType.Role);
             Console.WriteLine(sql);
             return true;
         }
 
 
-        public virtual bool GrantRightToUser(Right right, User user)
+        public virtual bool GrantRightToRole(BusinessModuleInstance businessModule, Right right, User user)
         {
             var sql = @"declare @rightAssignId int 
-                        select @rightAssignId = id from right_assign where businessModule = {0} and right={1} and subject ={2} and subjectType={3})
+                        select @rightAssignId = id from right_assign where businessModuleInstance = {0} and right={1} and subject ={2} and subjectType={3})
                         if @rightAssignId is not null
                            begin 
                               update right_assign
-                              set businessModule={0} , right={1}, subject={2} ,subjectType={3},grantType={4}
+                              set businessModuleInstance={0} , right={1}, subject={2} ,subjectType={3},grantType={4}
                            end
                         else
                            begin
-                              insert into right_assign(businessModule,right,subject,subjectType,grantType)
+                              insert into right_assign(businessModuleInstance,right,subject,subjectType,grantType)
                               values ({0},{1},{2},{3},{4})
                            end
                       
                         ";
-            sql = string.Format(sql, right.BusinessModule.ID, right.Code, user.ID, GrantSubjectType.User);
+            sql = string.Format(sql, businessModule.ID, right.ID, user.ID, GrantSubjectType.User);
             Console.WriteLine(sql);
             return true;
         }
@@ -63,8 +63,17 @@ namespace Arch.Data.Test.OtherTest.MyRightManageDesign
         /// <param name="subjectId"></param>
         /// <param name="grantType"></param>
         /// <returns></returns>
-        public IEnumerable<Right> QueryRightByBusinessModule(int businessModuleId, GrantSubjectType subjectType, int subjectId, GrantType grantType) {
-
+        public IEnumerable<Right> QueryRightByBusinessModule(int businessModuleInstanceId, GrantSubjectType subjectType, int subjectId, GrantType grantType)
+        {
+            var sql = string.Empty;
+            sql = @"select b.*  from right_assign a,right b
+                        where a.right = b.id 
+                          and a.businessModuleInstance ={0} 
+                          and grantType={1} 
+                          and subject={2} 
+                          and subjectType={3}";
+            Console.WriteLine(string.Format(sql, businessModuleInstanceId, grantType, subjectId, subjectType));
+            return null;
         }
 
         #endregion

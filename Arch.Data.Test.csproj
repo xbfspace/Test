@@ -50,7 +50,8 @@
     <Compile Include="OtherTest\MyRightManageDesign\Privilege\User.cs" />
     <Compile Include="OtherTest\MyRightManageDesign\RightManager.cs" />
     <Compile Include="OtherTest\MyRightManageDesign\RightManagers\Model\Attributes\GrantSubjectTypeAttribute.cs" />
-    <Compile Include="OtherTest\MyRightManageDesign\RightManagers\Model\BusinessModule.cs" />
+    <Compile Include="OtherTest\MyRightManageDesign\RightManagers\Model\BusinessModuleTemplate.cs" />
+    <Compile Include="OtherTest\MyRightManageDesign\RightManagers\Model\BusinessModuleInstance.cs" />
     <Compile Include="OtherTest\MyRightManageDesign\RightManagers\Model\GrantSubjectType.cs" />
     <Compile Include="OtherTest\MyRightManageDesign\RightManagers\Model\Right.cs" />
     <Compile Include="OtherTest\MyRightManageDesign\RightManagers\Model\GrantType.cs" />
