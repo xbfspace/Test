@@ -32,7 +32,7 @@ namespace Arch.Data.Test.OtherTest.MyRightManageDesign
         }
 
 
-        public virtual bool GrantRightToRole(BusinessModuleInstance businessModule, Right right, User user)
+        public virtual bool GrantRightToUser(BusinessModuleInstance businessModule, Right right, User user)
         {
             var sql = @"declare @rightAssignId int 
                         select @rightAssignId = id from right_assign where businessModuleInstance = {0} and right={1} and subject ={2} and subjectType={3})
@@ -52,17 +52,17 @@ namespace Arch.Data.Test.OtherTest.MyRightManageDesign
             Console.WriteLine(sql);
             return true;
         }
+
+        public virtual bool GrantRightsToUser(BusinessModuleInstance businessModule, IEnumerable<Right> rights, User user) {
+            foreach (var right in rights) {
+                GrantRightToUser(businessModule, right, user);
+            }
+            return true;
+        }
         #endregion
 
 
         #region query
-        /// <summary>
-        /// 查询业务模块向对象授予的所有权限
-        /// </summary>
-        /// <param name="subjectType"></param>
-        /// <param name="subjectId"></param>
-        /// <param name="grantType"></param>
-        /// <returns></returns>
         public IEnumerable<Right> QueryRightByBusinessModule(int businessModuleInstanceId, GrantSubjectType subjectType, int subjectId, GrantType grantType)
         {
             var sql = string.Empty;
@@ -75,7 +75,26 @@ namespace Arch.Data.Test.OtherTest.MyRightManageDesign
             Console.WriteLine(string.Format(sql, businessModuleInstanceId, grantType, subjectId, subjectType));
             return null;
         }
-
+        public RightResult QueryRightResult(int businessModuleId, int rightId, GrantSubjectType subjectType, int subjectId) {
+            var sql = string.Empty;
+            sql = @"select b.*,a.grantType from right_assign a 
+                     where a.businessModuleInstance={0}
+                       and a.right={1}
+                       and a.subjectType={2}
+                       and a.subjectId={3}
+                       and a.right=b.id";
+            return null;
+        }
+        public RightResult QueryMergedRightResult(int businessModuleId, int rightId, int userId) {
+            var sql = string.Empty;
+            sql = @"select b.*,a.grantType from right_assign a 
+                     where a.businessModuleInstance={0}
+                       and a.right={1}
+                       and a.right=b.id";
+            //todo :如果b.priority=0，且结果集中存在grantType=0的数据
+            //从结果过滤出所有的subjectType 和 subject,查询用户所属的角色、组织等进行比较
+            return null;
+        }
         #endregion
     }
 }
