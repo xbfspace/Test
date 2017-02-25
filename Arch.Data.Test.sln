@@ -7,7 +7,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Arch.Data.Test", "Arch.Data
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Arch.Data", "Arch.Data\Arch.Data.csproj", "{B97CD6E2-93E7-4E80-8DD8-8A2F7B6F71D3}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NIS.RightSystem", "..\NIS.RightSystem\NIS.RightSystem.csproj", "{AF75EAEF-A9B7-4F0A-AB41-7138469B13BC}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NIS.RightSystem", "NIS.RightSystem\NIS.RightSystem.csproj", "{1FD084C7-C342-49D8-AC57-860652D95115}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -38,16 +38,16 @@ Global
 		{B97CD6E2-93E7-4E80-8DD8-8A2F7B6F71D3}.Performance|Any CPU.Build.0 = Performance|Any CPU
 		{B97CD6E2-93E7-4E80-8DD8-8A2F7B6F71D3}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B97CD6E2-93E7-4E80-8DD8-8A2F7B6F71D3}.Release|Any CPU.Build.0 = Release|Any CPU
-		{AF75EAEF-A9B7-4F0A-AB41-7138469B13BC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{AF75EAEF-A9B7-4F0A-AB41-7138469B13BC}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{AF75EAEF-A9B7-4F0A-AB41-7138469B13BC}.FlightRelease|Any CPU.ActiveCfg = Release|Any CPU
-		{AF75EAEF-A9B7-4F0A-AB41-7138469B13BC}.FlightRelease|Any CPU.Build.0 = Release|Any CPU
-		{AF75EAEF-A9B7-4F0A-AB41-7138469B13BC}.JPRelease|Any CPU.ActiveCfg = Release|Any CPU
-		{AF75EAEF-A9B7-4F0A-AB41-7138469B13BC}.JPRelease|Any CPU.Build.0 = Release|Any CPU
-		{AF75EAEF-A9B7-4F0A-AB41-7138469B13BC}.Performance|Any CPU.ActiveCfg = Release|Any CPU
-		{AF75EAEF-A9B7-4F0A-AB41-7138469B13BC}.Performance|Any CPU.Build.0 = Release|Any CPU
-		{AF75EAEF-A9B7-4F0A-AB41-7138469B13BC}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{AF75EAEF-A9B7-4F0A-AB41-7138469B13BC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1FD084C7-C342-49D8-AC57-860652D95115}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1FD084C7-C342-49D8-AC57-860652D95115}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1FD084C7-C342-49D8-AC57-860652D95115}.FlightRelease|Any CPU.ActiveCfg = Release|Any CPU
+		{1FD084C7-C342-49D8-AC57-860652D95115}.FlightRelease|Any CPU.Build.0 = Release|Any CPU
+		{1FD084C7-C342-49D8-AC57-860652D95115}.JPRelease|Any CPU.ActiveCfg = Release|Any CPU
+		{1FD084C7-C342-49D8-AC57-860652D95115}.JPRelease|Any CPU.Build.0 = Release|Any CPU
+		{1FD084C7-C342-49D8-AC57-860652D95115}.Performance|Any CPU.ActiveCfg = Release|Any CPU
+		{1FD084C7-C342-49D8-AC57-860652D95115}.Performance|Any CPU.Build.0 = Release|Any CPU
+		{1FD084C7-C342-49D8-AC57-860652D95115}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1FD084C7-C342-49D8-AC57-860652D95115}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
