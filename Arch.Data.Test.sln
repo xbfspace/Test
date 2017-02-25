@@ -7,8 +7,6 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Arch.Data.Test", "Arch.Data
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Arch.Data", "Arch.Data\Arch.Data.csproj", "{B97CD6E2-93E7-4E80-8DD8-8A2F7B6F71D3}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RightsSystem", "..\RightsSystem\RightsSystem.csproj", "{C40B72A1-20DE-47DA-B66D-35DAF28BD2CA}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -38,16 +36,6 @@ Global
 		{B97CD6E2-93E7-4E80-8DD8-8A2F7B6F71D3}.Performance|Any CPU.Build.0 = Performance|Any CPU
 		{B97CD6E2-93E7-4E80-8DD8-8A2F7B6F71D3}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B97CD6E2-93E7-4E80-8DD8-8A2F7B6F71D3}.Release|Any CPU.Build.0 = Release|Any CPU
-		{C40B72A1-20DE-47DA-B66D-35DAF28BD2CA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{C40B72A1-20DE-47DA-B66D-35DAF28BD2CA}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{C40B72A1-20DE-47DA-B66D-35DAF28BD2CA}.FlightRelease|Any CPU.ActiveCfg = Release|Any CPU
-		{C40B72A1-20DE-47DA-B66D-35DAF28BD2CA}.FlightRelease|Any CPU.Build.0 = Release|Any CPU
-		{C40B72A1-20DE-47DA-B66D-35DAF28BD2CA}.JPRelease|Any CPU.ActiveCfg = Release|Any CPU
-		{C40B72A1-20DE-47DA-B66D-35DAF28BD2CA}.JPRelease|Any CPU.Build.0 = Release|Any CPU
-		{C40B72A1-20DE-47DA-B66D-35DAF28BD2CA}.Performance|Any CPU.ActiveCfg = Release|Any CPU
-		{C40B72A1-20DE-47DA-B66D-35DAF28BD2CA}.Performance|Any CPU.Build.0 = Release|Any CPU
-		{C40B72A1-20DE-47DA-B66D-35DAF28BD2CA}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{C40B72A1-20DE-47DA-B66D-35DAF28BD2CA}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
